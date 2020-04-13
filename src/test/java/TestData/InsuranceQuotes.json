@@ -1,0 +1,23 @@
+{
+  "InsuranceQuotes": {
+    "zipCode": "29577",
+    "parkingAddress": "10 River Oaks Drive",
+    "parkingIndex": "1",
+    "firstName": "Bob",
+    "lastName": "Crazy",
+    "birthday": "01/01/1904",
+    "year": "2006",
+    "yearIndex": "2006",
+    "make": "Acura",
+    "makeKeyword": "Acura",
+    "model": "TSX",
+    "modelKeyword": "TSX",
+    "trim": "4dr Sedan 5A w/Navi",
+    "trimKeyword": "4dr Sedan 5A w/Navi",
+    "mileage": "15000",
+    "frequency": "per year",
+    "currentInsurance": "AAA",
+    "insuranceKeyword": "AAA",
+    "email": "zebratest2@wootap.me"
+  }
+}
