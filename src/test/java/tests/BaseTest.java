@@ -15,24 +15,21 @@ public class BaseTest extends TestNG {
 
     public WebDriver driver;
 
-    @Parameters({"envUrl"})
     @BeforeSuite(alwaysRun = true)
-    public void baseTestSuiteSetup(@Optional String envUrl) {
+    public void baseTestSuiteSetup() {
 
-        /* Specify default URL */
-        envUrl = "https://TheZebra.com";
-
+        /* Set default URL */
+        String envUrl = "https://TheZebra.com";
         TestConfig.setBaseUrl(envUrl);
     }
 
-    @Parameters({"browser"})
     @BeforeClass(alwaysRun = true)
-    public void baseTestClassSetup(@Optional String browser) {
+    public void baseTestClassSetup() {
         log( "\n**************************************************\n" +
                 "* Initializing " + this.getClass().getSimpleName() + "...\n" +
                 "**************************************************", true);
 
-        browser = "firefox";
+        String browser = "firefox";
         log("Browser: " + browser, true);
 
         System.setProperty("webdriver.gecko.driver", "geckodriver");
@@ -40,7 +37,7 @@ public class BaseTest extends TestNG {
 
         /* Create a webdriver instance */
         driver = BrowserFactory.getDriver(browser);
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
     }
 
 

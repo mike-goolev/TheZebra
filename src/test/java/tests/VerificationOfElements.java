@@ -5,7 +5,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 
-public class VerificationsOfElements extends BaseTest {
+public class VerificationOfElements extends BaseTest {
     private HomePage homePage;
 
     @BeforeMethod(alwaysRun = true)

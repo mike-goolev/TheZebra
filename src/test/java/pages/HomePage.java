@@ -63,7 +63,6 @@ public class HomePage extends BasePage {
      * Hover on the Compare drop down in the header
      */
     public void hoverOverCompareDropDown() {
-        //wait.until(elementToBeClickable(homePageLocators.compareDropDown));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         hoverOverElement(homePageLocators.compareDropDown);
     }
@@ -109,7 +108,6 @@ public class HomePage extends BasePage {
      * Hover on the Tools & Tips drop down in the header
      */
     public void hoverOverToolsAndTipsDropDown() {
-//        wait.until(elementToBeClickable(homePageLocators.toolsAndTipsDropDown));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         hoverOverElement(homePageLocators.toolsAndTipsDropDown);
     }
@@ -135,7 +133,6 @@ public class HomePage extends BasePage {
      * Hover on the Company drop down in the header
      */
     public void hoverOverCompanyDropDown() {
-//        wait.until(elementToBeClickable(homePageLocators.companyDropDown));
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         hoverOverElement(homePageLocators.companyDropDown);
     }
