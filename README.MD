@@ -26,6 +26,7 @@ VerificationOfElements - verifies whether links/text/buttons/icons are displayed
 
 1) cd to the project directory
 2) run ./gradlew clean test --tests "tests.InsuranceQuotes"
+       or
        ./gradlew clean test --tests "tests.VerificationOfElements"
        
        
