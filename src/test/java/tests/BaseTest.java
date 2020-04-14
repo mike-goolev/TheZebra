@@ -57,17 +57,17 @@ public class BaseTest extends TestNG {
                 "* Finishing " + this.getClass().getSimpleName() + "...\n" +
                 "**************************************************", true);
 
-//        if (driver != null) {
-//            driver.quit();
-//        }
+        if (driver != null) {
+            driver.quit();
+        }
     }
 
     @AfterSuite(alwaysRun = true)
     public void baseTestSuiteTeardown(){
         log( "\nTesting finished.\n", true);
 
-//        if (driver != null) {
-//            driver.quit();
-//        }
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }

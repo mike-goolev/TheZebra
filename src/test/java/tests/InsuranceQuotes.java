@@ -77,7 +77,7 @@ public class InsuranceQuotes extends BaseTest {
     @Test
     public void getAutoQuotes() {
 
-        /* Launch Zebra home page */
+        /* Start test on Zebra home page */
         homePage.loadHomePageByURL();
 
         /* Select Car Insurance radio button */
@@ -154,11 +154,6 @@ public class InsuranceQuotes extends BaseTest {
 
         /* Retrieve list of available carriers */
         autoQuotesPage.getListOfInsuranceNames();
-    }
-
-    @Test
-    public void checkQouteInEmail() {
-
     }
 
     @AfterMethod(alwaysRun = true)

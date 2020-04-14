@@ -9,52 +9,122 @@ public class Locators {
     public static class HomePageLocators {
 
         /* Header of the page */
-        public By headerBrandLogo = By.xpath("//a[@class='header-brand']");
-        public By compareBtn = By.xpath("//span[contains(text(),'Compare')]");
-        public By toolsAndTipsBtn = By.xpath("//span[contains(text(),'Tools & Tips')]");
-        public By companyBtn = By.xpath("//span[contains(text(),'Company')]");
+        public By compareDropDown = By.xpath("//span[contains(text(),'Compare')]");
+        public By toolsAndTipsDropDown = By.xpath("//span[contains(text(),'Tools & Tips')]");
+        public By companyDropDown = By.xpath("//span[contains(text(),'Company')]");
+        public By headerCallIcon = By.xpath("//a[@class='cta-phone cta-phone-link']//*[local-name()='svg']");
+        public By headerPhoneNumber = By.xpath("//a[@class='cta-phone cta-phone-link']//span[@class='cta-phone-display'][contains(text(),'1.888.255.4364')]");
 
-        /* Headlines on the page */
+        /* Compare menu */
+        public By headerAutoInsurance = By.xpath("//a[contains(text(),'Auto Insurance')]");
+        public By headerHomeInsurance = By.xpath("//a[contains(text(),'Home Insurance')]");
+        public By headerRentersInsurance = By.xpath("//a[contains(text(),'Renters Insurance')]");
+        public By headerFreeCarInsuranceQuotes = By.xpath("//a[contains(text(),'Free Car Insurance Quotes')]");
+        public By headerBestCheapCarInsurance = By.xpath("//a[contains(text(),'Best Cheap Car Insurance')]");
+        public By headerBestCarInsuranceByVehicle = By.xpath("//a[contains(text(),'Best Car Insurance By Vehicle')]");
+        public By headerBestInsuranceCompanies = By.xpath("//a[contains(text(),'Best Insurance Companies')]");
+        public By headerInsuranceByState = By.cssSelector("div.header.header-black:nth-child(4) div.header-nav div.header-nav-item:nth-child(1) ul:nth-child(2) li:nth-child(8) > a:nth-child(1)");
+        public By headerOtherInsurance = By.xpath("//a[contains(text(),'Other Insurance')]");
+
+        /* Tools & Tips menu */
+        public By headerResources = By.xpath("//a[contains(text(),'Resources')]");
+        public By headerResearchReports = By.xpath("//a[contains(text(),'Research Reports')]");
+        public By headerStateOfInsurance = By.xpath("//a[contains(text(),'State of Insurance')]");
+        public By headerCarInsuranceCalculator = By.xpath("//a[contains(text(),'Car Insurance Calculator')]");
+
+        /* Company menu */
+        public By headerAboutTheZebra = By.xpath("//a[contains(text(),'About The Zebra')]");
+        public By headerPress = By.cssSelector("div.header.header-black:nth-child(4) div.header-nav div.header-nav-item:nth-child(3) ul:nth-child(2) li:nth-child(2) > a:nth-child(1)");
+        public By headerCareers = By.cssSelector("div.header.header-black:nth-child(4) div.header-nav div.header-nav-item:nth-child(3) ul:nth-child(2) li:nth-child(3) > a:nth-child(1)");
+        public By headerContactUs = By.cssSelector("div.header.header-black:nth-child(4) div.header-nav div.header-nav-item:nth-child(3) ul:nth-child(2) li:nth-child(4) > a:nth-child(1)");
+        public By headerCovidResponse = By.xpath("//a[contains(text(),'COVID-19 Response')]");
+
+        /* 'Insurance in black & white' section */
         public By heroHeadline = By.xpath("//h1[@class='hero-headline']");
         public By heroSubHeadline = By.xpath("//h3[@class='hero-subheadline']");
-        public By featureHeadline = By.xpath("//h2[@class='features-headline display-5']");
-
-        /* Icons */
-        public By carIconFirst = By.xpath("//div[@class='hero hero-homepage']//div[@class='radio-button-row']//div[1]//label[1]//div[1]//*[local-name()='svg']");
-        public By homeIconFirst = By.xpath("//div[@class='hero hero-homepage']//div[3]//label[1]//div[1]//*[local-name()='svg']");
-        public By shareIcon = By.xpath("//div[@class='icon-wrap icon-form']//*[local-name()='svg']");
-        public By compareIcon = By.xpath("//div[@class='icon-wrap icon-shield-multiple']//*[local-name()='svg']");
-        public By saveIcon = By.xpath("//div[@class='icon-wrap icon-wallet']//*[local-name()='svg']");
-        public By lockerIcon = By.xpath("//div[@class='icon-wrap']//*[local-name()='svg']");
-        public By computerIcon = By.xpath("//div[@class='icon-wrap icon-computer']//*[local-name()='svg']");
-        public By phoneIcon = By.xpath("//div[@class='icon-wrap icon-phone-agent']//*[local-name()='svg']");
-        public By carIconSecond = By.xpath("//div[@class='main-content-container']//div[@class='radio-button-row']//div[1]//label[1]//div[1]//*[local-name()='svg']");
-        public By homeIconSecond = By.xpath("//div[@class='homepage-bottom-cta-container']//div[3]//label[1]//div[1]//*[local-name()='svg']");
-        public By ctaDivider = By.xpath("//div[@class='cta-divider-circle']");
-
-        /* Radio buttons */
-        public By carInsuranceBtn = By.xpath("//div[@class='hero hero-homepage']//div[@class='radio-button-row']//div[1]//label[1]");
-        public By homeInsuranceBtn = By.xpath("//div[@class='hero hero-homepage']//div[3]//label[1]");
-
-        /* Zip code text fields */
+        public By carInsuranceRadioBtn = By.xpath("//div[@class='hero hero-homepage']//div[@class='radio-button-row']//div[1]//label[1]");
+        public By homeInsuranceRadioBtn = By.xpath("//div[@class='hero hero-homepage']//div[3]//label[1]");
+        public By homeIconTheZebra = By.xpath("//a[@class='header-brand']//*[local-name()='svg']");
         public By zipCode = By.xpath("//body/div/div/div/div/div/div/form/div/div/div/input[1]");
-        public By zipCodeSecond = By.id("f592bbfa-d4a6-496c-a501-1b68c7dae709");
-
-        /* Start buttons */
         public By startBtn = By.xpath("//body/div/div/div/div/div/div/form/div/div/div/button[1]");
+        public By beenHereBeforeText = By.xpath("//p[@class='retrieve-quotes mt-xs']");
+        public By reviewYourQuotesLink = By.xpath("//a[contains(text(),'Review your quotes.')]");
+
+        /* 'How does The Zebra work?' section */
+        public By featureHeadline = By.xpath("//div[1]//div[2]//div[1]//div[1]//div[1]//h2[1]");
+        public By shareIcon = By.xpath("//div[@class='icon-wrap icon-form']//*[local-name()='svg']");
+        public By shareTitle = By.xpath("//h4[contains(text(),'Share')]");
+        public By shareText = By.xpath("//p[contains(text(),'Tell us a little about yourself and your car and')]");
+        public By homeLink = By.xpath("//b[contains(text(),'home')]");
+        public By compareIcon = By.xpath("//div[@class='icon-wrap icon-shield-multiple']//*[local-name()='svg']");
+        public By compareTitle = By.xpath("//h4[contains(text(),'Compare')]");
+        public By compareText = By.xpath("//div[@class='homepage-features-container']//div[@class='row icon-grid']//div[2]//p[1]");
+        public By quotesLink = By.xpath("//b[contains(text(),'quotes')]");
+        public By saveIcon = By.xpath("//div[@class='icon-wrap icon-wallet']//*[local-name()='svg']");
+        public By saveTitle = By.xpath("//h4[contains(text(),'Save')]");
+        public By saveText = By.xpath("//p[contains(text(),'Choose your quote and secure your new rate in an i')]");
+
+        /* 'Our Privacy Pledge' section */
+        public By lockerIcon = By.xpath("//div[@class='icon-wrap']//*[local-name()='svg']");
+        public By ourPrivacyPledgeHeadline = By.xpath("//h2[contains(text(),'Our Privacy Pledge')]");
+        public By ourPrivacyPledgeText = By.xpath("//p[contains(text(),'Your privacy matters to us. So does your sanity. W')]");
+        public By compareAndSaveLink = By.xpath("//a[contains(text(),'compare and save')]");
+
+        /* "It's easy to start saving." section */
+        public By easyStartHeadline = By.xpath("//body//div//div//div[1]//div[1]//div[1]//div[1]//h2[1]");
+        public By buyOnlineIcon = By.xpath("//div[@class='icon-wrap icon-computer']//*[local-name()='svg']");
+        public By buyOnlineHeadline = By.xpath("//h2[contains(text(),'Buy Online')]");
+        public By buyOnlineText = By.xpath("//p[contains(text(),'Our easy-to-use tool lets you compare quotes from')]");
+        public By carInsuranceIcon = By.xpath("//div[@class='main-content-container']//div[@class='radio-button-row']//div[1]//label[1]");
+        public By homeInsuranceIcon = By.xpath("//div[@class='homepage-bottom-cta-container']//div[3]//label[1]");
+        public By zipCodeSecond = By.xpath("//html//body//div//div//div//div//div//div//div//div//div//form//div//div//div//input[@name='zipcode']");
         public By startBtnSecond = By.xpath("//html//body//div//div//div//div//div//div//div//div//div//form//div//div//div//button");
+        public By noSpamText = By.xpath("//span[contains(text(),'No spam. We take your privacy seriously.')]");
 
+        public By orCtaDivider = By.xpath("//div[@class='cta-divider-circle']");
+
+        public By callAnAgentIcon = By.xpath("//div[@class='icon-wrap icon-phone-agent']//*[local-name()='svg']");
+        public By callAnAgentHeadline = By.xpath("//h2[contains(text(),'Call an Agent')]");
+        public By callAnAgentText = By.xpath("//p[contains(text(),'Whether you just prefer a friendly voice or need m')]");
+        public By callIconSecond = By.xpath("//p[@class='hidden-md-down cta-phone-display']//*[local-name()='svg']");
+        public By phoneNumberSecond = By.xpath("//p[@class='hidden-md-down cta-phone-display']");
+        public By espanolText = By.xpath("//a[contains(text(),'Hablamos Español')]");
+
+        /* Footer of the page - Car Insurance Guide */
+        public By carInsuranceGuideLink = By.xpath("//a[contains(text(),'Car Insurance Guide')]");
+        public By personalInjuryLink = By.xpath("//a[contains(text(),'Personal Injury Protection Insurance')]");
+        public By uninsuredMotoristLink = By.xpath("//a[contains(text(),'Uninsured Motorist Coverage')]");
+        public By liabilityInsuranceLink = By.xpath("//a[contains(text(),'Liability Insurance')]");
+        public By permissiveUseLink = By.xpath("//a[contains(text(),'Permissive Use Insurance')]");
+        public By noFaultInsuranceLink = By.xpath("//a[contains(text(),'No-Fault Insurance')]");
+        public By nonOwnersInsuranceLink = By.xpath("//a[contains(text(),'Non-Owners Insurance')]");
+        public By insuranceGlossaryLink = By.xpath("//a[contains(text(),'Insurance Glossary')]");
+        public By collisionInsuranceLink = By.xpath("//a[contains(text(),'Collision Insurance')]");
+        public By fullCoverageInsuranceLink = By.xpath("//a[contains(text(),'Full Coverage Insurance')]");
+        public By averageCarInsuranceCostLink = By.xpath("//a[contains(text(),'Average Car Insurance Cost')]");
+        public By askAnAgentLink = By.xpath("//a[contains(text(),'Ask An Agent')]");
+        public By reviewsLink = By.xpath("//a[contains(text(),'Reviews')]");
+        public By tvCommercialsLink = By.xpath("//a[contains(text(),'TV Commercials')]");
+
+        /* About us section */
+        public By aboutUsLink = By.xpath("//a[contains(text(),'About Us')]");
+        public By pressLink = By.xpath("//ul[@class='list-unstyled footer-links inline']//a[contains(text(),'Press')]");
+        public By weAreHiringLink = By.xpath("//a[@class='highlighted']");
+        public By contactUsLink = By.xpath("//ul[@class='list-unstyled footer-links inline']//a[contains(text(),'Contact Us')]");
+
+        /* Social media contact information */
+        public By followOnUs = By.xpath("//p[@class='preamble']");
+        public By fbIcon = By.xpath("//nav[@class='nav-social footer-links inline']//a[1]");
+        public By twIcon = By.xpath("//div[@class='row footer-navs']//a[2]");
+        public By igIcon = By.xpath("//div[@class='row footer-navs']//a[3]");
+        public By inIcon = By.xpath("//div[@class='row footer-navs']//a[4]");
+
+        /* Copyright information */
+        public By copyRightText = By.xpath("//p[@class='copyright']");
+        public By termsOfServiceLink = By.xpath("//p[@class='copyright']//a[contains(text(),'Terms of Service')]");
+        public By privacyLink = By.xpath("//p[@class='copyright']//a[contains(text(),'Privacy Policy')]");
+        public By licensesLink = By.xpath("//p[@class='copyright']//a[contains(text(),'Licenses')]");
     }
-
-    /********************************************* Nav Page *******************************************/
-
-    public static class NavPageLocators {
-
-        /* Header */
-        public By headerBrand = By.xpath("//a[@class='header-brand']");
-        public By phoneNumber = By.xpath("//a[@class='cta-phone cta-phone-link']//span[@class='cta-phone-display'][contains(text(),'1.888.255.4364')]");
-    }
-
 
     /*********************************************  Start - Auto Questions Page *******************************************/
 
@@ -91,13 +161,12 @@ public class Locators {
         }
 
         /* About yourself */
-        public By firstName = By.xpath("//input[@id='first_namestart']"); // id = first_namestart
-        public By lastName = By.xpath("//input[@id='last_namestart']"); // id = last_namestart
-        public By birthday = By.id("date_of_birthstart"); // startting from 01/01/1904
+        public By firstName = By.xpath("//input[@id='first_namestart']");
+        public By lastName = By.xpath("//input[@id='last_namestart']");
+        public By birthday = By.id("date_of_birthstart"); // starting from 01/01/1904
 
         /* Save & Continue button */
-        public By saveAndContinueBtn = By.xpath("//button[@id='startDetailsSaveBtn']"); // id = startDetailsSaveBtn
-
+        public By saveAndContinueBtn = By.xpath("//button[@id='startDetailsSaveBtn']");
     }
 
     /**********************************************  Select Vehicles - Auto Questions Page *******************************************/
@@ -243,7 +312,6 @@ public class Locators {
         public By showMyQuotesBtn = By.xpath("//button[@id='summaryShowQuotesBtn']"); // id = summaryShowQuotesBtn
     }
 
-
     /*********************************************  Select Auto Rate Page *******************************************/
 
     public static class AutoQuotesPageLocators {
@@ -253,11 +321,7 @@ public class Locators {
 
         /* Carrier card locators */
         public By carrierNames = By.xpath("//div[@class='btn carrier-info']/div//h4[@class='carrier-name']");
-        public By carrierWithUnavailablePrices = By.xpath("//div[@class='right-col']//button/span[contains(text(),'Get quote') or contains(text(),'See quote')]");
-
-        public By carrierWithAvailablePrices = By.xpath("//div[@class='right-col']//button//h3");
     }
-
 }
 
 

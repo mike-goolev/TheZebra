@@ -54,7 +54,7 @@ public class VehiclesQuestionsPage extends BasePage {
      */
     public void selectCarTrim(String trim, String trimKeyword) {
         setElementText(vehiclesQuestionsPageLocators.vehicleTrim, trim);
-        click(vehiclesQuestionsPageLocators.selectSuggestedVehicleMakeByKeyword(trimKeyword));
+        click(vehiclesQuestionsPageLocators.findSuggestedVehicleTrimByKeyword(trimKeyword));
     }
 
     /**

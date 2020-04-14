@@ -27,7 +27,7 @@ public class StartQuestionsPage extends BasePage {
     }
 
     /**
-     * Clicks on  Save & continue button
+     * Clicks on Save & continue button
      */
     public void clickOnSaveAndContinueBtn() {
         click(startQuestionsPageLocators.saveAndContinueBtn);

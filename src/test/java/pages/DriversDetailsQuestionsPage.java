@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import utils.Locators;
 
-import java.util.concurrent.TimeUnit;
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
 
 public class DriversDetailsQuestionsPage extends BasePage {
 
@@ -13,7 +13,6 @@ public class DriversDetailsQuestionsPage extends BasePage {
     public DriversDetailsQuestionsPage(WebDriver driver) {
         super(driver);
         driversDetailsQuestionsPageLocators = new Locators.DriversDetailsQuestionsPageLocators();
-
     }
 
     /**
@@ -27,7 +26,7 @@ public class DriversDetailsQuestionsPage extends BasePage {
      * Selects marital status
      */
     public void selectMaritalStatus() {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        wait.until(elementToBeClickable(driversDetailsQuestionsPageLocators.singleBtn));
         click(driversDetailsQuestionsPageLocators.singleBtn);
     }
 
@@ -36,6 +35,7 @@ public class DriversDetailsQuestionsPage extends BasePage {
      * Selects credit score
      */
     public void selectCreditScore() {
+        wait.until(elementToBeClickable(driversDetailsQuestionsPageLocators.excellentBtn));
         click(driversDetailsQuestionsPageLocators.excellentBtn);
     }
 
@@ -43,6 +43,7 @@ public class DriversDetailsQuestionsPage extends BasePage {
      * Selects education level
      */
     public void selectEducationLevel() {
+        wait.until(elementToBeClickable(driversDetailsQuestionsPageLocators.doctoralBtn));
         click(driversDetailsQuestionsPageLocators.doctoralBtn);
     }
 
@@ -51,6 +52,7 @@ public class DriversDetailsQuestionsPage extends BasePage {
      * Selects insurance length coverage
      */
     public void selectInsuranceLengthCoverage() {
+        wait.until(elementToBeClickable(driversDetailsQuestionsPageLocators.moreThenThreeYearsBtn));
         click(driversDetailsQuestionsPageLocators.moreThenThreeYearsBtn);
         }
 
@@ -66,6 +68,7 @@ public class DriversDetailsQuestionsPage extends BasePage {
      * Selects the answer to the question "Any accidents or tickets in the last 3 years?"
      */
     public void selectAnyAccidents() {
+        wait.until(elementToBeClickable(driversDetailsQuestionsPageLocators.noBtn));
         click(driversDetailsQuestionsPageLocators.noBtn);
     }
 

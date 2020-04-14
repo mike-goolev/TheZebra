@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import utils.Locators;
 
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+
 public class VehiclesDetailsQuestionsPage extends BasePage {
 
     private final Locators.VehiclesDetailsQuestionsPageLocators vehiclesDetailsQuestionsPageLocators;
@@ -23,6 +25,7 @@ public class VehiclesDetailsQuestionsPage extends BasePage {
      * Selects the purpose of the car usage
      */
     public void selectCarUsagePurpose() {
+        wait.until(elementToBeClickable(vehiclesDetailsQuestionsPageLocators.personalCommutingBtn));
         click(vehiclesDetailsQuestionsPageLocators.personalCommutingBtn);
     }
 

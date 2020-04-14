@@ -1,11 +1,11 @@
 package pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-import static org.openqa.selenium.support.ui.ExpectedConditions.*;
-import static org.testng.Reporter.log;
+import static org.openqa.selenium.support.ui.ExpectedConditions.elementToBeClickable;
+import static org.openqa.selenium.support.ui.ExpectedConditions.invisibilityOfElementLocated;
 
 public class BasePage {
 
@@ -57,20 +57,6 @@ public class BasePage {
     }
 
     /**
-     * Clicks an element
-     *
-     * @param identifier the By object
-     */
-    public void select(By identifier) {
-        try {
-            wait.until(elementToBeSelected(identifier));
-            driver.findElement(identifier).click();
-        } catch (NoSuchElementException | ElementClickInterceptedException | StaleElementReferenceException e) {
-            driver.findElement(identifier).click();
-        }
-    }
-
-    /**
      * Clears an element's text
      *
      * @param identifier the By object for the click event
@@ -79,9 +65,8 @@ public class BasePage {
         try {
             click(identifier);
             driver.findElement(identifier).clear();
-            Assert.assertEquals(getElementText(identifier), "", "The element's text should be empty");
         } catch (Exception e) {
-            Assert.assertEquals(getElementText(identifier), "", "The element's text should be empty");
+            System.out.println("The element's text should be empty");
         }
     }
 
@@ -96,23 +81,8 @@ public class BasePage {
             clearElementText(identifier);
             driver.findElement(identifier).sendKeys(text);
         } catch (NoSuchElementException | ElementNotInteractableException e) {
+            System.out.println("No such element found");
         }
-    }
-
-    /**
-     * Gets text of an element
-     *
-     * @param identifier the By object
-     * @return The element's text
-     */
-    public String getElementText(By identifier) {
-        String text = null;
-        try {
-            text = driver.findElement(identifier).getText();
-        } catch (NoSuchElementException | StaleElementReferenceException e) {
-            System.out.println("can't find element");
-        }
-        return text;
     }
 
     /**
@@ -142,50 +112,12 @@ public class BasePage {
     }
 
     /**
-     * Verifies if a radio button is in a selected state by looking at the input attribute for checked
-     *
-     * @param identifier the By object for the radio button
-     *
-     * @return whether or not a radio button has been selected
-     */
-    boolean isRadioButtonSelected(By identifier) {
-        return getElementAttribute(identifier, "input").contains("checked");
-    }
-
-    /**
-     * Gets text of an element's attribute
+     * Hover over element at given position
      *
      * @param identifier the By object
-     * @param attribute the element's attribute value
-     *
-     * @return The element's attribute text
      */
-    String getElementAttribute(By identifier, String attribute) {
-        String attributeText = null;
-        if (elementExistsLongTimeout(identifier)) {
-            try {
-                attributeText = driver.findElement(identifier).getAttribute(attribute);
-            } catch (NoSuchElementException e) {
-                log(identifier + "Unable to get attribute of element " + identifier + "\n" + e.getLocalizedMessage(), true);
-            }
-        }
-        return attributeText;
-    }
-
-    /**
-     * Verifies if a given element exists on the page
-     *
-     * @param identifier the By object
-     *
-     * @return Whether or not the element exists
-     */
-    boolean elementExistsLongTimeout(By identifier) {
-        try {
-            wait.until(visibilityOfElementLocated(identifier));
-            return true;
-        } catch (NoSuchElementException | StaleElementReferenceException | TimeoutException e) {
-            log( "\n\n\tElement " + identifier + "' did not display. \nWaited " +  this.getClass().getSimpleName() + "...\n", true);
-            return false;
-        }
+    void hoverOverElement(By identifier) {
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(identifier)).build().perform();
     }
 }

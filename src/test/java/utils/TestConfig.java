@@ -19,8 +19,4 @@ public class TestConfig {
     public static String getBaseUrl() {
         return TestConfig.baseUrl;
     }
-
-    /* Get path to Temp Mail homepage URL */
-    public static void setTempMailHomePageUrl(String tempMailUrl) {
-    }
 }
