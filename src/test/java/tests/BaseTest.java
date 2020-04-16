@@ -7,6 +7,7 @@ import org.testng.annotations.*;
 import utils.BrowserFactory;
 import utils.TestConfig;
 
+import java.awt.*;
 import java.lang.reflect.Method;
 
 import static org.testng.Reporter.log;
@@ -38,6 +39,14 @@ public class BaseTest extends TestNG {
         /* Create a webdriver instance */
         driver = BrowserFactory.getDriver(browser);
         driver.manage().window().maximize();
+        // move the mouse cursor outside of the browser window
+        Robot robot = null;
+        try {
+            robot = new Robot();
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+        robot.mouseMove(0, 0);
     }
 
 
